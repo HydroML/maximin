@@ -29,11 +29,11 @@
 maximin.cand <- function(n, Xcand, Tmax=nrow(Xcand), Xorig=NULL, init=NULL, verb=FALSE, tempfile=NULL) 
 {
   ## sanity checks
-  if(class(Xcand) != "matrix"){
+  if(!"matrix" %in% class(Xcand)){
      Xcand <- as.matrix(Xcand)
   }
   
-  if(!is.null(Xorig) && class(Xorig) != "matrix"){
+  if(!is.null(Xorig) && !"matrix" %in% class(Xorig)){
      Xorig <- as.matrix(Xorig)
   }
   
